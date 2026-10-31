@@ -1,0 +1,12 @@
+# Historical board/sensor examples only: copy to arduino-cli.yaml and replace C:/path/to/youyou.
+# pet-firmware.ps1 generates its own local configuration and does not need this file.
+board_manager:
+  additional_urls:
+    - https://jihulab.com/esp-mirror/espressif/arduino-esp32/-/raw/gh-pages/package_esp32_index_cn.json
+directories:
+  data: C:/path/to/youyou/.tools/arduino-data
+  downloads: C:/path/to/youyou/.tools/downloads
+  user: C:/path/to/youyou/.tools/arduino-user
+updater:
+  enable_notification: false
+

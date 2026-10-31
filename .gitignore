@@ -1,0 +1,21 @@
+.tools/
+build/
+logs/
+
+# Film and creative work are outside this hardware/software repository.
+/creative/
+
+# Machine-specific configuration and installed dependencies.
+/arduino-cli.yaml
+node_modules/
+__pycache__/
+.env
+.env.*
+!.env.example
+
+# Local pet profiles, credentials and device backups must not be published.
+**/state.json
+**/control.json
+*.key
+*.pem
+factory-flash.bin

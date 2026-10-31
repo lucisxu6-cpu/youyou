@@ -1,0 +1,332 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>youyou 首次采购与搭建指南</title><style>:root{color-scheme:light;--ink:#302d35;--muted:#756b71;--rose:#956575;--line:#e6ddd6;--paper:#fffdfa}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f0eb;color:var(--ink);font:16px/1.85 "Microsoft YaHei",system-ui,sans-serif}a{color:#815267;text-underline-offset:4px;overflow-wrap:anywhere}a:hover{color:#543749}header{max-width:1190px;margin:34px auto 0;padding:0 32px;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--rose)}.layout{max-width:1190px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:32px;margin:20px auto 48px;padding:0 32px}nav{align-self:start;position:sticky;top:24px;font-size:13px}nav strong{display:block;margin:5px 0 15px;color:#54454e}nav a{display:block;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--muted)}main{background:var(--paper);padding:42px 46px;border:1px solid var(--line);border-radius:18px;min-width:0;box-shadow:0 8px 28px #302d3505}h1{font-size:32px;line-height:1.4;letter-spacing:-.5px;margin:0 0 20px}h2{font-size:23px;line-height:1.5;margin:54px 0 20px;padding-top:24px;border-top:1px solid var(--line);scroll-margin-top:22px}h3{font-size:18px;line-height:1.6;margin:27px 0 12px}p{margin:14px 0}strong{font-weight:700}ul,ol{padding-left:25px}li{margin:9px 0;padding-left:3px}.table-wrap{overflow-x:auto;margin:20px 0}table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.75}th,td{padding:12px 13px;border:1px solid var(--line);text-align:left;vertical-align:top}th{white-space:nowrap;background:#eee6e3;color:#59404e;font-weight:600}tbody tr:nth-child(even){background:#faf7f3}code{font-family:Consolas,monospace;font-size:.88em;background:#f0eae5;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}pre{font-size:13px;line-height:1.7;background:#f1ece6;border:1px solid var(--line);padding:18px;border-radius:10px;overflow:auto;tab-size:4}pre code{padding:0;background:transparent;overflow-wrap:normal}blockquote{margin:20px 0;padding:8px 18px;border-left:3px solid var(--rose);background:#f8eef1}svg,img{display:block;width:100%;height:auto;margin:24px 0}footer{border-top:1px solid var(--line);margin-top:44px;padding-top:18px;font-size:12px;color:var(--muted)}@media(max-width:850px){.layout{display:block;padding:0 16px;margin-top:12px}header{padding:0 20px;margin-top:22px}nav{position:static;padding-bottom:18px}nav a{display:inline-block;padding:5px 12px 5px 0;border:0;font-size:12px}main{padding:27px 22px}h1{font-size:27px}h2{font-size:21px}table{min-width:580px}svg{min-width:0}}@media print{body{background:#fff;font-size:11pt;line-height:1.65}header,nav{display:none}.layout{display:block;max-width:none;margin:0;padding:0}main{box-shadow:none;border:0;padding:0}h1{font-size:22pt}h2{font-size:16pt;margin-top:28px;break-after:avoid}h3{font-size:13pt;break-after:avoid}table{font-size:9pt;min-width:0}tr,svg,pre{break-inside:avoid}th,td{padding:7px}.table-wrap{overflow:visible}a{color:inherit}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:9pt}@page{size:A4;margin:17mm 16mm}</style></head><body><header>YOUYOU · USB 陪伴小猫</header><div class="layout"><nav aria-label="目录"><strong>阅读导航</strong><a href="#guide-section-1">1 首次购买什么</a><a href="#guide-section-2">2 收到配件后先认清标识</a><a href="#guide-section-3">3 新主板先准备一次固件</a><a href="#guide-section-4">4 断电后连接四片模块</a><a href="#guide-section-5">5 安装插件并完成第一次设置</a><a href="#guide-section-6">6 先做一轮简短验收</a><a href="#guide-section-7">7 以后日常使用和再做一套</a><a href="#guide-section-8">8 装进娃娃之前</a><a href="#guide-section-9">9 遇到问题先查哪里</a></nav><main><h1 id="youyou">youyou 首次采购与搭建指南</h1>
+<p>用一块开发板、四片压力模块和一根 USB 数据线，让小猫在 DeepSeek Harness 中根据触碰回应你。先在桌上接好并验证，再考虑装进娃娃。</p>
+<p>本指南对应已验证的 <strong>Windows＋DeepSeek Harness 0.2.1-rc.5＋插件 0.3.6＋固件 1.1.1</strong>，更新于 2026 年 10 月 31 日。未来换主板型号或软件大版本时，需要重新核对兼容性。</p>
+<p><strong>阅读顺序：买齐配件 → 准备新板 → 断电接线 → 安装插件 → 配对并聊天。</strong> 已经正常使用的这一套，不需要重新接线或刷固件。</p>
+<h2 id="guide-section-1">1 首次购买什么</h2>
+<p>下面的数量用于做一套四个感应部位的桌面原型。头部、背部、左爪、右爪各用一片，四片全部使用。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>必需配件</th>
+<th>数量</th>
+<th>下单时认准什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微雪 ESP32-S3-DEV-KIT-N8R8-M</td>
+<td>1 块</td>
+<td><strong>已焊排针</strong>版本，8 MB Flash＋8 MB PSRAM；官方 SKU 为 24243。不要仅搜索“ESP32”后随便选一块。</td>
+</tr>
+<tr>
+<td>KEYES 薄膜压力传感器模块</td>
+<td>4 套</td>
+<td>沿用已购的<strong>不带胶壳版本</strong>；每套包含感应片、已配套连接的电路板、三针连接线。模块输出标有 V／G／S。</td>
+</tr>
+<tr>
+<td>170 孔迷你免焊面包板</td>
+<td>1 个</td>
+<td>用于把几根线接在一起。确认是标准五孔连通组结构。主板放在旁边，不需要硬插到迷你面包板上。</td>
+</tr>
+<tr>
+<td>2.54 mm 杜邦跳线</td>
+<td>1 包</td>
+<td>本文统一接法需要 <strong>公对公 12 根＋公对母 6 根</strong>。20 cm 的混合装够桌面搭建，原先采购的 120 根混合装也可继续使用。</td>
+</tr>
+<tr>
+<td>USB 数据线</td>
+<td>1 根</td>
+<td>开发板端是 USB-C；电脑端按接口选 USB-A 或 USB-C。商品必须注明支持<strong>数据传输</strong>，不能只有充电功能。</td>
+</tr>
+</tbody>
+</table></div>
+<p>主板型号、内存配置和 SKU 可对照<a href="https://docs.waveshare.net/ESP32-S3-DEV-KIT-N8R8/">微雪官方产品说明</a>。购买时再确认“已焊排针”，避免收到需要自己焊接的版本。</p>
+<p>传感器的<a href="https://ic-item.jd.com/10146808184913.html">原采购商品链接</a>可作为复购线索；商品页当前库存、价格和选项需下单时核对。历史订单没有记录独立模块的完整料号，<strong>不要把 KE3032、KE3057 等教学套件编号当成四片模块的购买型号</strong>。确认买到原款模块和配套线；其他外形相似的压力模块可能需要改参数或接法。</p>
+<p>可另备一套同款压力模块作为替换件。标签纸、绝缘胶带和理线带有助于整理线材；准备装娃娃时，再补可拆卸外壳或固定支架。</p>
+<p>这套成品模块接法不另加裸 FSR 教程里的 10 kΩ 分压电阻，也不需要外接电池、USB 转串口板或面包板电源模块。语音和运动不在当前方案中，因此暂不采购麦克风、喇叭、舵机。</p>
+<h2 id="guide-section-2">2 收到配件后先认清标识</h2>
+<p><strong>V、G、S 的含义：</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>模块标识</th>
+<th>含义</th>
+<th>本项目接到哪里</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V 或 VCC</td>
+<td>电源</td>
+<td>开发板的 <strong>3V3</strong></td>
+</tr>
+<tr>
+<td>G 或 GND</td>
+<td>地线</td>
+<td>开发板的 <strong>GND／G</strong></td>
+</tr>
+<tr>
+<td>S 或 Signal</td>
+<td>模拟信号</td>
+<td>四个不同的 GPIO 输入，见后文</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>3V3 表示 3.3V 电源；IO5 表示 GPIO5 信号引脚。IO5 不是 5V。</strong> 不按排针“第几根”猜位置，要读主板旁边印的字。</p>
+<p>杜邦线的“公头”是露出的金属针，“母头”是可以套住排针的孔。本指南按以下配件结构编写：模块原配线在连接开发板的这一端分成三个杜邦母头，开发板是已焊好的公排针。若实物插头不一样，先确认转换线，不强插。</p>
+<p>原配线常见红色是 V、黑色是 G、黄色是 S，但延长线可能换过颜色。<strong>最终按模块标识和完整走线确认，不凭颜色猜。</strong> 本项目采用 3.3V 供电和模拟输出；KEYES 的<a href="https://www.keyesrobot.cn/projects/KE3032/zh-cn/latest/docs/Windows/MicroPython/15_%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%94%20%E8%96%84%E8%86%9C%E5%8E%8B%E5%8A%9B%E4%BC%A0%E6%84%9F%E5%99%A8.html">模块接线示例</a>可用于核对 V／G／S 用途，示例中其他主板的 GP27 不能照搬到这里。</p>
+<h2 id="guide-section-3">3 新主板先准备一次固件</h2>
+<p>“固件”就是开发板里面的程序。新买的板子通常带着厂商示例，还不会与宠物插件通讯。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>你手上的板子</th>
+<th>接下来做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>已经在这套项目里正常使用</td>
+<td>跳过固件准备，直接按需要接线或打开 Harness。</td>
+</tr>
+<tr>
+<td>新买的同型号板子</td>
+<td>先只连 USB，不接传感器；按<a href="FIRST-BOARD-SETUP.html">首次固件准备附录</a>完成一次备份、核对和固件准备。</td>
+</tr>
+<tr>
+<td>其他 ESP32 型号或存储规格</td>
+<td>先确认兼容性，不能直接使用本项目的刷写地址和固件。</td>
+</tr>
+</tbody>
+</table></div>
+<p>不熟悉固件准备时，可以把技术附录交给协助开发的人。<strong>准备完成的标准是：固件为 1.1.1、USB 握手通过、识别到四路输入。</strong> 电源灯亮或者有 COM 端口，还不代表宠物固件已准备好。</p>
+<p>这一步只在新板首次准备或以后明确升级时进行。日常聊天、触碰、配对、校准和 USB 插拔均不刷固件。</p>
+<h2 id="guide-section-4">4 断电后连接四片模块</h2>
+<h3 id="section-4">第一步 给模块编号</h3>
+<p>拔掉开发板 USB，确认没有其他电源。给四套模块贴上 <strong>1、2、3、4</strong> 的标签，感应片和对应电路板一起编号。</p>
+<p>编号只帮助接线，暂时不用决定哪片是头部。身体位置以后在设置里配对。</p>
+<h3 id="section-5">第二步 找到面包板的连通组</h3>
+<p>标准迷你面包板通常是一组五个孔内部相连，中央长沟两侧互不相连，相邻的组也互不相连。<strong>一条金属连接片连接的五孔，才算同一组；不要把贯穿长沟的整排十孔当作同一组。</strong> 参考<a href="https://learn.adafruit.com/breadboards-for-beginners/breadboards">Adafruit 面包板说明</a>。</p>
+<p>选六个互相独立的连通组，贴上 <strong>V、G、S1、S2、S3、S4</strong> 标签。170 孔迷你板通常没有长条电源轨，这里的“V 组／G 组”是你选出来的普通五孔组。</p>
+<p>不同面包板的摆放方向和印字可能不同，因此本指南不指定 a1、b3 之类孔位。连通结构不确定时，先看该面包板说明，或在断电状态下用万用表通断档确认；没有把握就先不要通电。</p>
+<h3 id="section-6">第三步 按表把线接入六个组</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>独立连通组</th>
+<th>放进同组的线</th>
+<th style="text-align: right;">占用孔数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V 组</td>
+<td>主板 <strong>3V3</strong>，以及 1、2、3、4 号模块各自的 <strong>V</strong></td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>G 组</td>
+<td>主板 <strong>GND</strong>，以及 1、2、3、4 号模块各自的 <strong>G</strong></td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>S1 组</td>
+<td>主板 <strong>IO4／GPIO4</strong>，1 号模块 <strong>S</strong></td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>S2 组</td>
+<td>主板 <strong>IO6／GPIO6</strong>，2 号模块 <strong>S</strong></td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>S3 组</td>
+<td>主板 <strong>IO7／GPIO7</strong>，3 号模块 <strong>S</strong></td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>S4 组</td>
+<td>主板 <strong>IO5／GPIO5</strong>，4 号模块 <strong>S</strong></td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table></div>
+<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 665" role="img" aria-labelledby="title desc"><title id="title">四片压力模块的六组接线</title><desc id="desc">V组连接主板3V3及四片V，G组连接主板GND及四片G。四个独立信号组分别连接IO4与1号S、IO6与2号S、IO7与3号S、IO5与4号S。各组互不相连。图示不是实际孔位坐标。</desc><rect width="1000" height="665" rx="20" fill="#faf8f5"/><g font-family="Microsoft YaHei,system-ui,sans-serif"><text x="36" y="44" font-size="24" font-weight="700" fill="#302d35">六个独立连通组</text><text x="36" y="76" font-size="17" fill="#6f6870">实心圆＝插一根线　空心圆＝空孔　每行内部相通，各行互不相连</text><text x="36" y="138" font-size="20" font-weight="600" fill="#b65559">V 供电组</text><line x1="300" y1="132" x2="900" y2="132" stroke="#b65559" stroke-width="4"/><circle cx="300" cy="132" r="9" fill="#b65559" stroke="#b65559" stroke-width="3"/><text x="300" y="110" text-anchor="middle" font-size="18" fill="#302d35">主板 3V3</text><circle cx="450" cy="132" r="9" fill="#b65559" stroke="#b65559" stroke-width="3"/><text x="450" y="110" text-anchor="middle" font-size="18" fill="#302d35">1号 V</text><circle cx="600" cy="132" r="9" fill="#b65559" stroke="#b65559" stroke-width="3"/><text x="600" y="110" text-anchor="middle" font-size="18" fill="#302d35">2号 V</text><circle cx="750" cy="132" r="9" fill="#b65559" stroke="#b65559" stroke-width="3"/><text x="750" y="110" text-anchor="middle" font-size="18" fill="#302d35">3号 V</text><circle cx="900" cy="132" r="9" fill="#b65559" stroke="#b65559" stroke-width="3"/><text x="900" y="110" text-anchor="middle" font-size="18" fill="#302d35">4号 V</text><text x="36" y="219" font-size="20" font-weight="600" fill="#536776">G 地线组</text><line x1="300" y1="213" x2="900" y2="213" stroke="#536776" stroke-width="4"/><circle cx="300" cy="213" r="9" fill="#536776" stroke="#536776" stroke-width="3"/><text x="300" y="191" text-anchor="middle" font-size="18" fill="#302d35">主板 GND</text><circle cx="450" cy="213" r="9" fill="#536776" stroke="#536776" stroke-width="3"/><text x="450" y="191" text-anchor="middle" font-size="18" fill="#302d35">1号 G</text><circle cx="600" cy="213" r="9" fill="#536776" stroke="#536776" stroke-width="3"/><text x="600" y="191" text-anchor="middle" font-size="18" fill="#302d35">2号 G</text><circle cx="750" cy="213" r="9" fill="#536776" stroke="#536776" stroke-width="3"/><text x="750" y="191" text-anchor="middle" font-size="18" fill="#302d35">3号 G</text><circle cx="900" cy="213" r="9" fill="#536776" stroke="#536776" stroke-width="3"/><text x="900" y="191" text-anchor="middle" font-size="18" fill="#302d35">4号 G</text><text x="36" y="300" font-size="20" font-weight="600" fill="#497e86">S1 信号组</text><line x1="300" y1="294" x2="900" y2="294" stroke="#497e86" stroke-width="4"/><circle cx="300" cy="294" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="300" y="272" text-anchor="middle" font-size="18" fill="#302d35">主板 IO4</text><circle cx="450" cy="294" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="450" y="272" text-anchor="middle" font-size="18" fill="#302d35">1号 S</text><circle cx="600" cy="294" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="600" y="272" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="750" cy="294" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="750" y="272" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="900" cy="294" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="900" y="272" text-anchor="middle" font-size="18" fill="#9b949a">空</text><text x="36" y="381" font-size="20" font-weight="600" fill="#497e86">S2 信号组</text><line x1="300" y1="375" x2="900" y2="375" stroke="#497e86" stroke-width="4"/><circle cx="300" cy="375" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="300" y="353" text-anchor="middle" font-size="18" fill="#302d35">主板 IO6</text><circle cx="450" cy="375" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="450" y="353" text-anchor="middle" font-size="18" fill="#302d35">2号 S</text><circle cx="600" cy="375" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="600" y="353" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="750" cy="375" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="750" y="353" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="900" cy="375" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="900" y="353" text-anchor="middle" font-size="18" fill="#9b949a">空</text><text x="36" y="462" font-size="20" font-weight="600" fill="#497e86">S3 信号组</text><line x1="300" y1="456" x2="900" y2="456" stroke="#497e86" stroke-width="4"/><circle cx="300" cy="456" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="300" y="434" text-anchor="middle" font-size="18" fill="#302d35">主板 IO7</text><circle cx="450" cy="456" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="450" y="434" text-anchor="middle" font-size="18" fill="#302d35">3号 S</text><circle cx="600" cy="456" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="600" y="434" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="750" cy="456" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="750" y="434" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="900" cy="456" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="900" y="434" text-anchor="middle" font-size="18" fill="#9b949a">空</text><text x="36" y="543" font-size="20" font-weight="600" fill="#497e86">S4 信号组</text><line x1="300" y1="537" x2="900" y2="537" stroke="#497e86" stroke-width="4"/><circle cx="300" cy="537" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="300" y="515" text-anchor="middle" font-size="18" fill="#302d35">主板 IO5</text><circle cx="450" cy="537" r="9" fill="#497e86" stroke="#497e86" stroke-width="3"/><text x="450" y="515" text-anchor="middle" font-size="18" fill="#302d35">4号 S</text><circle cx="600" cy="537" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="600" y="515" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="750" cy="537" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="750" y="515" text-anchor="middle" font-size="18" fill="#9b949a">空</text><circle cx="900" cy="537" r="9" fill="#faf8f5" stroke="#497e86" stroke-width="3"/><text x="900" y="515" text-anchor="middle" font-size="18" fill="#9b949a">空</text><text x="36" y="592" font-size="19" font-weight="600" fill="#b65559">IO5 是信号引脚，不是 5V。V 组与 G 组不能短接。</text><text x="36" y="625" font-size="17" fill="#6f6870">本图表达接线关系，不指定实物孔位；1—4 号模块的身体位置在软件中配对。</text></g></svg></p>
+<p>图中每一条线是一组独立的连通关系，<strong>不是实物孔位排列图</strong>。V 与 G 不能相连，四个 S 也不能相互接到一起。</p>
+<h3 id="section-7">第四步 对照线材怎么插</h3>
+<ol>
+<li>每个模块的原配线有 V、G、S 三个母头。每个母头各接一根公对公跳线，另一头插入表中对应面包板组。四套合计 <strong>12 根公对公</strong>。</li>
+<li>开发板的 3V3、GND、IO4、IO6、IO7、IO5 各接一根公对母线：母头套住开发板排针，公头插入对应面包板组。合计 <strong>6 根公对母</strong>。</li>
+<li>让模块和主板平放在绝缘桌面上，金属针不要碰到其他针脚或金属杂物。</li>
+</ol>
+<p>如果你现有的 S 线已经直接接到正确 GPIO，不必为了符合示意图重新改线；同一对端点直接连接和经独立面包板组连接，在这里是同一个信号连接关系。</p>
+<h3 id="section-8">第五步 通电前检查</h3>
+<ul>
+<li>四个 V 最终都连到 <strong>3V3</strong>，没有接到 5V。</li>
+<li>四个 G 最终都连到 <strong>GND</strong>，V 组与 G 组彼此独立。</li>
+<li>四个 S 分别连到 <strong>IO4、IO6、IO7、IO5</strong>，没有共用同一信号组。</li>
+<li>四片感应区都已松开，没有被书本、工具或线材压住。</li>
+</ul>
+<p>核对完再插入 USB。以后要挪动杜邦线，也先拔掉 USB。</p>
+<h2 id="guide-section-5">5 安装插件并完成第一次设置</h2>
+<h3 id="section-10">先准备电脑</h3>
+<p>使用 Windows，安装已验证兼容的 DeepSeek Harness 版本，并先确认普通文字聊天可用。当前模型调用需要电脑联网；开发板仍只走 USB，不需要给它配置 Wi-Fi。</p>
+<p>同一个 USB-C 接口可能让 Windows 出现两个 COM 端口，这是板载 USB Hub 的正常表现。需要辨认时，在设备管理器查看名称含 <strong>USB-Enhanced-SERIAL CH343</strong> 的那个；不要记死“COM4”。详见<a href="https://docs.waveshare.net/ESP32-S3-DEV-KIT-N8R8/FAQ/">微雪端口说明</a>。缺少驱动时从微雪资料页指向的官方驱动入口安装。</p>
+<h3 id="section-11">再安装宠物插件</h3>
+<ol>
+<li>把完整交付包解压到准备长期保留的文件夹。安装前先解压，不在压缩包内部操作。</li>
+<li>打开 Harness 左侧的 <strong>插件</strong>，在 <strong>添加插件</strong> 旁的下拉菜单选择 <strong>安装第三方插件</strong>。</li>
+<li>在 <strong>包名或地址</strong> 中填写解压后 <strong>plugin 文件夹的完整路径</strong>，例如 <code>D:\youyou-usb\plugin</code>，按提示安装并启用。这是文件夹路径，不是聊天指令。当前界面明确支持本地目录。</li>
+<li>如果未出现猫咪图标，完整退出 Harness（包括托盘）后重新打开。安装本地目录后保留该目录；不要随手删除或移动。</li>
+</ol>
+<p>熟悉开发的人也可使用交付包的 <code>install-pet-plugin.ps1</code>，它会先跑测试、备份 Harness 配置，再校验安装文件是否与源码一致；该方式需要 Node 24 和 Harness 自带工具。预打包插件在 <code>prebuilt</code> 中，源码安装目录是 <code>plugin</code>。</p>
+<h3 id="section-12">最后点击陪伴设置</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>顺序</th>
+<th>你要做什么</th>
+<th>完成后应看到什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>连接 USB，打开猫咪菜单 → 陪伴设置</td>
+<td>找到兼容设备，可绑定</td>
+</tr>
+<tr>
+<td>2</td>
+<td>点“绑定这只小猫”，填写名字并保存</td>
+<td>显示你起的名字</td>
+</tr>
+<tr>
+<td>3</td>
+<td>松开四片，点“开始校准”，等待约 3 秒</td>
+<td>可以开始部位配对</td>
+</tr>
+<tr>
+<td>4</td>
+<td>点“开始配对”，按提示选择头部、背部、左爪、右爪</td>
+<td>一次只显示当前一步</td>
+</tr>
+<tr>
+<td>5</td>
+<td>每次只按对应的一片；显示“记住啦，请松开”后松手</td>
+<td>自动进入下一步</td>
+</tr>
+<tr>
+<td>6</td>
+<td>四步完成后点“保存位置”</td>
+<td>触碰设置显示“已设置”</td>
+</tr>
+<tr>
+<td>7</td>
+<td>点“开始陪伴”</td>
+<td>建立专属聊天，可以对话</td>
+</tr>
+</tbody>
+</table></div>
+<p>感应片还在桌上时，按提示选一片作为该部位即可；之后把这片装到对应位置。左右爪按<strong>猫咪自己的左右</strong>命名。若后来换了位置，点“重新配对”，不需要改代码或刷固件。</p>
+<p>当前每台电脑的一个宠物档案只绑定一块板和一段聊天。聊天改名、切换到其他聊天，都不会改变绑定。</p>
+<h2 id="guide-section-6">6 先做一轮简短验收</h2>
+<ol>
+<li>打一句话，确认小猫能正常回复。</li>
+<li>逐片按下、松开，确认四个部位都能在设置里出现对应反馈。配对时不触发聊天，保存后才恢复触碰回应。</li>
+<li>等上一条回复完成，按住一片约 2 秒后松开，确认原来的陪伴聊天收到相关回应。</li>
+<li>正常使用状态下拔掉 USB，等约 5 秒再插回，确认自动重新连接，名字、部位和原聊天都还在。</li>
+</ol>
+<p>不要求每按一下都单独说一句：连续触碰会合并，回应有间隔，模型忙时过旧的触碰会丢弃。这里测的是接触与时间变化，不能把一次压力读数当作轻抚、拥抱或准确力度。</p>
+<h2 id="guide-section-7">7 以后日常使用和再做一套</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>情况</th>
+<th>做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>每天使用</td>
+<td>打开 Harness，插 USB，从猫咪菜单去聊天。一般无需重复校准或配对。</td>
+</tr>
+<tr>
+<td>暂时不想让触碰触发回复</td>
+<td>点“安静陪一会儿”。文字聊天仍然可用；需要时再恢复。</td>
+</tr>
+<tr>
+<td>正常拔插 USB</td>
+<td>可直接拔插，不需要先暂停；不要在明确进行固件刷写时拔线。</td>
+</tr>
+<tr>
+<td>更换线材、接入新感应片</td>
+<td>先拔 USB，再接线；换传感器后重新校准，并按需重新配对。</td>
+</tr>
+<tr>
+<td>只交换感应片身体位置</td>
+<td>点“重新配对”；名字和原聊天保留。</td>
+</tr>
+<tr>
+<td>同一电脑换新板</td>
+<td>先为新板准备固件；旧板拔掉，在设备详情解除原设备绑定，再绑定新板、校准和配对。原名字与聊天保留。</td>
+</tr>
+<tr>
+<td>另一台电脑再做一套</td>
+<td>重用本交付包和接线方案，在新电脑重新绑定、校准和配对。旧电脑的绑定状态不直接套用到新设备上。</td>
+</tr>
+<tr>
+<td>同时连接多块同类板</td>
+<td>当前插件不自动选择目标，也不支持同时养多只；先只连要使用的一块。</td>
+</tr>
+</tbody>
+</table></div>
+<p>插件与固件可以复用；每块板的设备身份由自身决定，每台电脑上的名字、校准、部位和聊天需要按实际使用建立。固件不保存这些用户设置。</p>
+<h2 id="guide-section-8">8 装进娃娃之前</h2>
+<p>桌面验证通过后，再确定头部、背部、两只爪子的安装位置。给感应片留合适支撑，避免棉花在无人触碰时持续压住它；不要折出死弯、用尖锐物戳压或把拉力传到感应片根部。</p>
+<p>开发板、金属排针和接头要有绝缘、防拉扯及可拆卸固定；USB 线留出口，主板周围留散热空间。面包板与松插的杜邦线适合桌面验证，不能直接视为经长期耐久验证的成品线束。</p>
+<p>安装后先松手重新校准，再逐一验证四个部位。若校准失败，先检查棉花预压、支撑和线路，不通过加大按压力度或强行放宽校准来掩盖问题。当前尚未完成装配后的温升与耐久验收。</p>
+<h2 id="guide-section-9">9 遇到问题先查哪里</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>优先检查</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主板亮灯，但电脑或插件找不到</td>
+<td>数据线是否支持传输；是否出现 CH343；是否已经准备宠物固件。不要先反复刷写。</td>
+</tr>
+<tr>
+<td>看见两个 COM 端口</td>
+<td>正常；开发调试选择 CH343，插件自动找支持的接口。</td>
+</tr>
+<tr>
+<td>提示串口被占用</td>
+<td>关闭其他串口监视器、采集程序；同一端口一次只能由一个程序使用。</td>
+</tr>
+<tr>
+<td>校准一直不通过</td>
+<td>全部松手；检查裸片是否被压住、接线是否松动。重新插线前先断电。</td>
+</tr>
+<tr>
+<td>配对有感应，但不前进</td>
+<td>只按一片并稍停；确认不是已经选过的片；看到成功后要完全松开。</td>
+</tr>
+<tr>
+<td>按头部却显示其他部位</td>
+<td>重新配对位置，不要凭感觉交换电源线。</td>
+</tr>
+<tr>
+<td>感应有反馈，但没有聊天回应</td>
+<td>是否保存四个位置、开启触碰回应；原聊天是否归档或正在回答；普通聊天和网络是否正常。</td>
+</tr>
+<tr>
+<td>插拔后位置或名字似乎变了</td>
+<td>先确认还是同一电脑、同一 Harness 用户环境、同一块板；不要立即解绑或删配置。</td>
+</tr>
+</tbody>
+</table></div>
+<p>进一步的技术约束见 <a href="USB-PROTOCOL.md">USB 协议</a>，状态处理见 <a href="PET-LIFECYCLE.md">生命周期说明</a>，验证范围见 <a href="FINAL-AUDIT-20261031.md">最终审查报告</a>。</p>
+<footer>离线阅读版 · 可使用浏览器打印或保存为 PDF。接线图已内嵌；外部产品与资料链接需要联网。</footer></main></div></body></html>

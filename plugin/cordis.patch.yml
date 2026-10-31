@@ -1,0 +1,11 @@
+- insert:
+    - id: loveandrobot-pet-usb
+      name: '@loveandrobot/dsh-pet-usb'
+      config:
+        pressDelta: 600
+        releaseDelta: 250
+        responseGapMs: 7000
+        eventMaxAgeMs: 6000
+        coalesceMs: 650
+        staleMs: 1500
+        retryMs: 5000

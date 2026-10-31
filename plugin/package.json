@@ -1,0 +1,41 @@
+{
+  "name": "@loveandrobot/dsh-pet-usb",
+  "version": "0.3.6",
+  "description": "youyou · 黑色大耳猫：悬浮陪伴、可视化设置与真实触碰对话",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./client": "./client/index.js"
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": "0.2.1-rc.5"
+  },
+  "os": [
+    "win32"
+  ],
+  "files": [
+    "src",
+    "client",
+    "bridge",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT"
+}
